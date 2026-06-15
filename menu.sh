@@ -15,6 +15,7 @@ while true; do
   echo "4. 查看访问地址"
   echo "5. 更新脚本"
   echo "6. 卸载"
+  echo "7. 生成 / 查看 NPM 反代配置"
   echo "0. 退出"
   echo "===================================="
   read -rp "请输入选项: " choice
@@ -42,6 +43,9 @@ while true; do
       ;;
     6)
       bash uninstall.sh
+      ;;
+    7)
+      bash proxy.sh
       ;;
     0)
       exit 0
