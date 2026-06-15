@@ -19,9 +19,10 @@ if ! command -v git >/dev/null 2>&1; then
 fi
 
 if [ -d "$INSTALL_DIR/.git" ]; then
-  echo "检测到已有目录，正在更新..."
+  echo "检测到已有目录，正在强制同步 GitHub 最新版本..."
   cd "$INSTALL_DIR"
-  git pull
+  git fetch origin main
+  git reset --hard origin/main
 else
   echo "正在拉取项目..."
   git clone "$REPO_URL" "$INSTALL_DIR"
