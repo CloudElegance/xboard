@@ -54,9 +54,9 @@ while true; do
       ln -sf /root/xboard-one-click/menu.sh /usr/local/bin/xb
       chmod +x /usr/local/bin/xb
       echo ""
-      echo "✅ 脚本已更新，请重新输入 xb 打开新菜单"
-      echo ""
-      read -rp "按回车返回菜单..."
+      echo "✅ 更新完成，正在重新加载菜单..."
+      sleep 1
+      exec bash /root/xboard-one-click/menu.sh
       ;;
     6)
       bash uninstall.sh
